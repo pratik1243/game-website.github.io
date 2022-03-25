@@ -2,7 +2,7 @@ let a = 0;
 let b = 0;
 
 function rock() {
-  let result = document.getElementById("result");
+  let result = document.getElementById("result1");
   let result2 = document.getElementById("result2");
   let result3 = document.getElementById("result3");
   let score1 = document.getElementById("score1");
@@ -36,7 +36,7 @@ function rock() {
 }
 
 function paper() {
-  let result = document.getElementById("result");
+  let result = document.getElementById("result1");
   let result2 = document.getElementById("result2");
   let score1 = document.getElementById("score1");
   let score2 = document.getElementById("score2");
@@ -70,7 +70,7 @@ function paper() {
 }
 
 function scissors() {
-  let result = document.getElementById("result");
+  let result = document.getElementById("result1");
   let result2 = document.getElementById("result2");
   let score1 = document.getElementById("score1");
   let score2 = document.getElementById("score2");
