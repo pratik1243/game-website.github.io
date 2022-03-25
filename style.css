@@ -2,12 +2,11 @@
   margin: 0px;
   margin: 0px;
   box-sizing: border-box;
- 
 }
 
 #game-navbar {
   height: 68px;
-  background-color: rgb(255, 0, 119);
+  background-color: rgb(140, 0, 255);
   width: 100%;
   display: flex;
   align-items: center;
@@ -15,20 +14,51 @@
 }
 #game-footer {
   height: 68px;
-  background-color: rgb(255, 0, 119);
+  background-color: rgb(76, 0, 255);
   width: 100%;
   display: flex;
   align-items: center;
   position: relative;
-  bottom: -60px;
   justify-content: center;
   margin-top: 40px;
+  z-index: -2;
+  
 }
 
 #game-navbar .navbar-heading {
   font-family: "Secular One", sans-serif;
   margin-left: 28px;
   color: black;
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  #game-navbar .navbar-heading {
+    font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+  #game-navbar .navbar-heading {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #game-navbar .navbar-heading {
+    margin-left: 15px;
+  }
+}
+
+.navbar-heading svg {
+  margin-top: 9px;
+  color: white;
+  font-size: 34px;
+}
+
+@media (max-width: 576px) {
+  .navbar-heading svg {
+    margin-top: 4px;
+  }
 }
 
 #game-footer .navbar-heading {
@@ -39,6 +69,25 @@
 
 .instructons {
   margin-right: 20px;
+  display: flex;
+}
+
+.instructons button {
+  font-size: 14px;
+  padding: 10px 30px;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .instructons button {
+    padding: 10px 10px 10px 30px;
+    margin-right: -5px;
+  }
+}
+
+.instructons svg {
+  left: 10px;
+  position: absolute;
 }
 
 .heading2 {
@@ -50,19 +99,44 @@
   margin: 20px;
 }
 
-@media (max-width: 567px) {
+@media (max-width: 640px) {
+  .heading2 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
   .heading2 {
     font-size: 10px;
+    margin: 6px;
   }
 }
 
 #game-section {
-  margin: auto;
-  max-width: 660px;
-  border: 2px solid rgb(255, 0, 119);
-  margin-top: 50px;
-  padding: 30px;
+  max-width: 520px;
+  border: 4px dashed rgb(153, 0, 255);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
   border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+@media(max-width:700px){
+  #game-section{
+  margin-top: 10px;
+
+  }
+}
+
+
+.full-section {
+  padding: 0px 30px;
+}
+@media (max-width: 576px) {
+  .full-section {
+    padding: 0px 15px;
+  }
 }
 
 section {
@@ -85,6 +159,14 @@ section {
   background-color: #11213a;
   color: #04c0b2;
 }
+
+
+@media(max-width:480px){
+  .game--container {
+   transform: scale(0.8);
+  }
+}
+
 
 .cell {
   font-family: "Permanent Marker", cursive;
@@ -121,6 +203,7 @@ section {
   overflow: hidden;
   background-color: black;
   cursor: pointer;
+  position: relative;
 }
 
 #character {
@@ -190,6 +273,9 @@ section {
   font-weight: lighter;
   margin: auto;
   text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
 
 #refresh {
@@ -199,16 +285,10 @@ section {
   font-weight: bold;
   font-size: 1rem;
   position: absolute;
-  left: 47%;
-  top: 50%;
-
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
   cursor: pointer;
-}
-
-@media (max-width: 576px) {
-  #refresh {
-    left: 40%;
-  }
 }
 
 button {
@@ -222,7 +302,7 @@ button {
 #board {
   text-align: center;
   padding: 1rem;
-  margin: 1rem;
+
   background-color: rgb(152, 75, 224);
   border-radius: 0.4rem;
 }
@@ -253,11 +333,6 @@ button {
   margin: 0.4rem;
   border-radius: 0.2rem;
   cursor: pointer;
-}
-
-button:active {
-  background-color: rgb(44, 2, 83);
-  color: white;
 }
 
 .player {
@@ -335,9 +410,9 @@ h1 + p {
 }
 
 .select-game-row .select-btn {
-  height: 140px;
-  width: 140px;
-  background-color: red;
+  height: 130px;
+  width: 130px;
+  background-color: rgb(76, 0, 255);
   cursor: pointer;
   margin: 20px;
   border-radius: 10px;
@@ -346,16 +421,45 @@ h1 + p {
   display: grid;
   place-items: center;
   padding: 20px;
-  font-size: 17px;
+  text-align: center;
   color: white;
   text-transform: capitalize;
+  transition: all 0.6s;
+}
+
+.select-game-row svg{
+  font-size: 10px;
+}
+
+
+@media (max-width: 440px) {
+  .select-game-row .select-btn {
+    height: 110px;
+    width: 110px;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+.select-game-row .select-btn:hover {
+  transform: scale(1.1);
 }
 
 .back-btn {
-  position: absolute;
-  left: 22%;
-  top: 16%;
+ margin-top: 30px;
   display: none;
+}
+
+.back-btn button {
+  outline: none;
+  border-width: 0px;
+  background-color: transparent;
+}
+
+.back-btn button svg {
+  font-size: 40px;
+  color: rgb(0, 89, 255);
+  transform: scale(2);
 }
 
 .container {
@@ -444,13 +548,15 @@ header {
 /* main table */
 .snakeTable {
   width: 210px;
-  height: 230px;
+  /* height: 210px; */
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
   box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.3);
+
+  margin-top: 0px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -465,13 +571,13 @@ header {
   background: white;
   border: solid 1px #16a085;
   width: 10px;
-  height: 10px;
+  height: 13px;
 }
 
 @media only screen and (min-width: 768px) {
   .box {
     width: 15px;
-    height: 15px;
+    height: 16.5px;
   }
 }
 
@@ -490,6 +596,7 @@ header {
   border: solid 1px #16a085;
   width: 210px;
   height: 20px;
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -537,6 +644,13 @@ header {
   padding: 60px;
   box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .start {
+    flex-direction: column;
+  }
 }
 
 .start span {
@@ -546,6 +660,7 @@ header {
   padding: 10px 20px;
   font-size: 20px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .start span:hover {
@@ -569,32 +684,55 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.instruction-page{
-    height: 100vh;
-    background-color: rgb(255, 0, 119);
-    width: 100%;
-    padding: 30px;
-    display: none;
+.instruction-page {
+  height: auto;
+  background-color: rgb(89, 0, 255);
+  width: 100%;
+  padding: 30px;
+  display: none;
 }
 
-.instructions-sec{
-    margin-top: 30px;
+.instructions-sec {
+  margin-top: 30px;
 }
 
-.instruction-page svg{
-    position: absolute;
-    right: 50px;
-    height: 50px;
-    color: rgb(248, 245, 245);
-    cursor: pointer;
+.instruction-page svg {
+  position: absolute;
+  right: 50px;
+  height: 50px;
+  color: rgb(248, 245, 245);
+  cursor: pointer;
 }
 
-.instructions-sec p{
-    font-family: sans-serif;
-    color: rgb(248, 245, 245);
+.instructions-sec p {
+  font-family: sans-serif;
+  color: rgb(248, 245, 245);
 }
 .instructions-sec h1 {
-    font-family: sans-serif;
-    color: rgb(252, 248, 248);
-    text-transform: capitalize;
+  font-family: sans-serif;
+  color: rgb(252, 248, 248);
+  text-transform: capitalize;
+}
+
+.control-buttons {
+  display: none;
+  margin: 20px;
+}
+
+.snake-btns {
+  text-transform: capitalize;
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.snake-btns:hover {
+  background: #16a085;
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .control-buttons {
+    display: block;
+    flex-direction: row;
+  }
 }
